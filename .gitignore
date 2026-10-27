@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+#cache
+.pytest_cache/
+.ruff_cache/
+
+#database
+data/*.db
+versions/
