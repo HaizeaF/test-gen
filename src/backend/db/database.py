@@ -20,10 +20,5 @@ def enable_sqlite_foreign_keys(dbapi_connection, connection_record) -> None:
 
 def get_session() -> Iterator[Session]:
     """FastAPI dependency that yields a database session."""
-    with Session(engine, expire_on_commit=False) as session:
-        try:
-            yield session
-            session.commit()
-        except Exception:
-            session.rollback()
-            raise
+    with Session(engine) as session:
+        yield session
