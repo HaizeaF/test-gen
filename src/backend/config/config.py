@@ -2,15 +2,21 @@
 
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 _BASE_DIR = Path(__file__).resolve().parents[3]
 load_dotenv(_BASE_DIR / ".env")
 
+
 class Config:
-    # Database
+    # Paths
     BASE_DIR: Path = _BASE_DIR
-    DB_URL: str = os.environ.get("DB_URL", "")
+    DATA_DIR: Path = BASE_DIR / "data"
+
+    # Database
+    DB_NAME: str = "test-gen.db"
+    DB_URL: str = os.environ.get("DB_URL", f"sqlite:///{DATA_DIR / DB_NAME}")
 
     # Timestamps
     TIMEZONE: str = "Europe/Madrid"

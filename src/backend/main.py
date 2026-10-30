@@ -10,11 +10,7 @@ from src.backend.routes.errors import register_error_handlers
 app = FastAPI(title="TestGen API", version="0.1.0")
 
 app.add_middleware(
-    CORSMiddleware,
-    allow_origins=Config.CORS_ORIGINS,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"]
+    CORSMiddleware, allow_origins=Config.CORS_ORIGINS, allow_credentials=True, allow_methods=["*"], allow_headers=["*"]
 )
 register_error_handlers(app)
 
