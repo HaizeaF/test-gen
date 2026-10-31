@@ -1,0 +1,65 @@
+/* Design tokens and Bootstrap overrides that give the application its purple identity. */
+
+:root {
+    --tg-primary: #7c3aed;
+    --tg-primary-dark: #6d28d9;
+    --tg-primary-darker: #5b21b6;
+    --tg-primary-soft: #f3edff;
+    --tg-primary-border: #ddd0fb;
+    --tg-bg: #f7f5fc;
+    --tg-surface: #ffffff;
+    --tg-text: #1f1b2e;
+    --tg-muted: #6b6783;
+    --tg-radius: 0.875rem;
+    --tg-shadow: 0 1px 2px rgba(31, 27, 46, 0.05), 0 8px 24px rgba(91, 33, 182, 0.06);
+
+    --bs-primary: var(--tg-primary);
+    --bs-primary-rgb: 124, 58, 237;
+    --bs-body-bg: var(--tg-bg);
+    --bs-body-color: var(--tg-text);
+    --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --bs-secondary-color: var(--tg-muted);
+    --bs-border-radius: 0.625rem;
+    --bs-link-color: var(--tg-primary-dark);
+    --bs-link-color-rgb: 109, 40, 217;
+    --bs-link-hover-color: var(--tg-primary-darker);
+    --bs-link-hover-color-rgb: 91, 33, 182;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--tg-primary);
+    --bs-btn-border-color: var(--tg-primary);
+    --bs-btn-hover-bg: var(--tg-primary-dark);
+    --bs-btn-hover-border-color: var(--tg-primary-dark);
+    --bs-btn-active-bg: var(--tg-primary-darker);
+    --bs-btn-active-border-color: var(--tg-primary-darker);
+    --bs-btn-disabled-bg: var(--tg-primary);
+    --bs-btn-disabled-border-color: var(--tg-primary);
+    --bs-btn-focus-shadow-rgb: 124, 58, 237;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--tg-primary);
+    --bs-btn-border-color: var(--tg-primary-border);
+    --bs-btn-hover-bg: var(--tg-primary);
+    --bs-btn-hover-border-color: var(--tg-primary);
+    --bs-btn-active-bg: var(--tg-primary-dark);
+    --bs-btn-active-border-color: var(--tg-primary-dark);
+    --bs-btn-focus-shadow-rgb: 124, 58, 237;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: var(--tg-primary);
+    border-color: var(--tg-primary);
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-bg: var(--tg-primary);
+}
