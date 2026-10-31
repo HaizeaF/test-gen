@@ -9,7 +9,7 @@ class QuizMode(StrEnum):
     RANDOM = "random"
     WEAK = "weak"
     UNSEEN = "unseen"
-    RECOMMENDED = "recommended"
+    EXAM = "exam"
 
 
 class Option(StrEnum):

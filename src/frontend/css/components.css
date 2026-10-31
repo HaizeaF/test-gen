@@ -1,0 +1,105 @@
+/* Reusable pieces. */
+
+.surface-card {
+    overflow: hidden;
+    background: var(--tg-surface);
+    border: 1px solid rgba(124, 58, 237, 0.08);
+    border-radius: var(--tg-radius);
+    box-shadow: var(--tg-shadow);
+}
+
+.surface-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--tg-primary-soft);
+}
+
+.surface-card-header h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.data-table {
+    margin: 0;
+}
+
+.data-table thead th {
+    padding: 0.75rem 1.25rem;
+    background: var(--tg-primary-soft);
+    border-bottom: 0;
+    color: var(--tg-primary-darker);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.data-table tbody td {
+    padding: 0.85rem 1.25rem;
+    border-color: var(--tg-primary-soft);
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.data-table .row-flagged {
+    --bs-table-bg: #fff8e6;
+}
+
+.badge-soft {
+    background: var(--tg-primary-soft);
+    border: 1px solid var(--tg-primary-border);
+    color: var(--tg-primary-darker);
+    font-weight: 500;
+}
+
+.tab-pills .nav-link {
+    color: var(--tg-muted);
+    font-weight: 500;
+    border-radius: 0.6rem;
+}
+
+.tab-pills .nav-link.active .badge {
+    background: #fff;
+    border-color: #fff;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    color: var(--tg-muted);
+    text-align: center;
+}
+
+.empty-state i {
+    margin-bottom: 0.75rem;
+    color: var(--tg-primary);
+    font-size: 2.5rem;
+    opacity: 0.6;
+}
+
+.empty-state h3 {
+    color: var(--tg-text);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.modal-content {
+    border: 0;
+    border-radius: var(--tg-radius);
+    box-shadow: 0 20px 50px rgba(31, 27, 46, 0.25);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--tg-primary-soft);
+}
